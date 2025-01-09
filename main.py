@@ -21,6 +21,9 @@ def run(query_fn, logfile):
     log_tmp(query_fn, logfile)
     threading.Timer(5.0, lambda: run(query_fn, logfile)).start()
 
-if __name__ == "__main__":
+def main():
     run(query_dummy, "/home/tomi/Documents/academicos/becas/alemania/centech/pa/git/tmpcontrol")
+
+if __name__ == "__main__":
+    main()
 
