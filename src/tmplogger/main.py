@@ -9,6 +9,7 @@ import pathlib
 from logging_config import get_temperature_logger, init_logging_config, init_logging_dirs
 from mercury_itc import MercuryiTC
 import pyvisa
+import sv_ttk
 
 
 def query_dummy():
@@ -130,6 +131,7 @@ def main():
     init_logging_config(ROOT)
     root_tk = tk.Tk()
     app = App(root_tk, path=ROOT)
+    sv_ttk.set_theme('dark')
     root_tk.mainloop()
 
 if __name__ == "__main__":
